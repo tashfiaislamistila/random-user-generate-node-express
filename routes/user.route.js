@@ -1,9 +1,10 @@
 const express = require("express");
+const users=require("../user.json");
 
 const router= express.Router();
 
 router.get("/all",(req,res)=>{
-res.send("users found");
+res.send(users);
 });
 
 router.post("/save",(req,res)=>{
