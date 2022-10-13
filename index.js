@@ -17,6 +17,10 @@ app.use("/user",usersRoutes);
      res.send("Hello world");
  });
 
+app.all("*",(req,res)=>{
+    res.send("No route found.");
+})
+
 app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`);
 });
