@@ -22,6 +22,10 @@ module.exports.updateUsers=(req,res,next)=>{
     const newUser=users.find(user=>user.id === Number(id));
     newUser.id=id;
     newUser.name=req.body.name;
+    newUser.address=req.body.address;
+    newUser.gender=req.body.gender;
+    newUser.contact=req.body.contact;
+    newUser.photo_url=req.body.photo_url;
     res.send(newUser);
 };
 
