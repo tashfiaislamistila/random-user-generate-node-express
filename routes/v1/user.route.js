@@ -63,4 +63,8 @@ router
    */
 .post(usersControllers.saveUsers);
 
+router
+.route("/update/:id")
+.patch(usersControllers.updateUsers);
+
  module.exports=router;

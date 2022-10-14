@@ -9,8 +9,18 @@ module.exports.getRandomUsers=(req,res,next)=>{
 }    
     
 
-module.exports.saveUsers=(req,res)=>{
+module.exports.saveUsers=(req,res,next)=>{
     console.log(req.body);
     users.push(req.body);
     res.send(users);
+}
+
+module.exports.updateUsers=(req,res,next)=>{
+    const {id}=req.params;
+    const filter={_id:id};
+
+    const newUser=users.find(user=>user.id === Number(id));
+    newUser.id=id;
+    newUser.name=req.body.name;
+    res.send(newUser);
 }
