@@ -1,11 +1,8 @@
 const users=require("../user.json");
 
 module.exports.getAllUsers=(req,res,next)=>{
-    res.send(users); 
+    res.json(users); 
 }
-// router.get("/random",(req,res)=>{
-    // res.send(users[Math.floor(Math.random()*users.length)]);
-    // });
 
 module.exports.getRandomUsers=(req,res,next)=>{
      res.send(users[Math.floor(Math.random()*users.length)]);
@@ -13,5 +10,6 @@ module.exports.getRandomUsers=(req,res,next)=>{
     
 
 module.exports.saveUsers=(req,res)=>{
-    res.send("save user")
+    users.push(req.body);
+    res.send(users);
 }
