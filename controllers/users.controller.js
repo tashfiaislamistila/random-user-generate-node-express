@@ -10,6 +10,7 @@ module.exports.getRandomUsers=(req,res,next)=>{
     
 
 module.exports.saveUsers=(req,res)=>{
+    console.log(req.body);
     users.push(req.body);
     res.send(users);
 }
