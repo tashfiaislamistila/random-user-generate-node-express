@@ -8,7 +8,7 @@ module.exports.getAllUsers=(req,res,next)=>{
     // });
 
 module.exports.getRandomUsers=(req,res,next)=>{
-    res.send(users[Math.floor(Math.random()*users.length)]);
+     res.send(users[Math.floor(Math.random()*users.length)]);
 }    
     
 

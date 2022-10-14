@@ -8,8 +8,8 @@ const router= express.Router();
 router
 .route("/all")
   /**
-   * @api {get} /tools All tools
-   * @apiDescription Get all the tools
+   * @api {get} /users All users
+   * @apiDescription Get all the users
    * @apiPermission admin
    *
    * @apiHeader {String} Authorization   User's access token
@@ -27,8 +27,8 @@ router
 router
 .route("/random")
    /**
-   * @api {get} /tools All tools
-   * @apiDescription Get all the tools
+   * @api {get} /users random users
+   * @apiDescription Get random the users
    * @apiPermission admin
    *
    * @apiHeader {String} Authorization   User's access token
@@ -43,9 +43,12 @@ router
    */
 .get(usersControllers.getRandomUsers)
 
+
+router
+.route("/save")
      /**
-   * @api {post} /tools save a tool 
-   * @apiDescription Get all the tools
+   * @api {post} /users save a user 
+   * @apiDescription save all the users
    * @apiPermission admin
    *
    * @apiHeader {String} Authorization   User's access token
@@ -58,7 +61,6 @@ router
    * @apiError (Unauthorized 401)  Unauthorized  Only authenticated users can access the data
    * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
    */
-
 .post(usersControllers.saveUsers);
 
  module.exports=router;

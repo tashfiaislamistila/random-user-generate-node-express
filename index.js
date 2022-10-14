@@ -4,9 +4,12 @@ const app = express();
 const dbConnect=require("./utils/dbConnect");
 const port = process.env.PORT || 5000;
 const usersRoutes=require("./routes/v1/user.route.js");
+const viewCount = require("./middleware/viewCount");
 
 app.use(cors());
 app.use(express.json());
+
+ app.use(viewCount);
 
 dbConnect();
 
