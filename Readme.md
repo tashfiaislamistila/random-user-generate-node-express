@@ -1,5 +1,5 @@
-* To get all users - https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/all
-*  For random user- https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/random
-* For Save user by POST method- https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/save
-* Update users information by id- https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/update/8
-* Delete user by id-https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/delete/7
+* GET/user/all - https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/all (Get all the users from the .json file)
+*  GET/user/random - https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/random (Get a random user from the .json file)
+* POST/user/save - https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/save (Save a user in the .json file)
+* PATCH/user/update - https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/update/8 (Update users information by id)
+* DELETE/user/delete - https://random-user-generate-node-express-nfdy-i3fp1qawr.vercel.app/api/v1/user/delete/7 (Delete users from .json file)
